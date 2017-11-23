@@ -6,16 +6,12 @@
         <div>
             <h1><a href="">Blog Rafała</a></h1>
         </div>
-        
-        <div>
-            <p>published: 22.11.2017, 19:24</p>
-            <h2><a href="">Mój pierwszy post</a></h2>
-            <a>Post ten jest wynikiem pracy z tutorialem Django girls</a>
-        </div>
-        <div>
-            <p>published: 22.11.2017, 19:28</p>
-            <h2><a href="">Drugi post</a></h2>
-            <p>Własnie otrzymałem wiadomość z wirusem przez facebooka i mesengera. Skasowałem całą konwersację z Klaudią i uruchomiłem skanowanie komputera</p> 
-        </div>
+        {% for post in posts %}
+            <div>
+                <p>published: {{ post.published_date}}</p>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
     </body>
 </html>
