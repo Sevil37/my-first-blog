@@ -1,3 +1,9 @@
+body
+{
+    background: url("/static/img/green_cup.png");
+    /* Background pattern from subtlepatterns.com */
+    margin: 0;
+}
 .page-header {
     background-color: #ff9400;
     margin-top: 0;
